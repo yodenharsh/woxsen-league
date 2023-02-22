@@ -1,0 +1,9 @@
+* {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    background-color: rgb(59, 59, 59);
+  }
