@@ -8,6 +8,7 @@ public class LeagueWebsiteApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(LeagueWebsiteApplication.class, args);
+		System.out.println("");
 	}
 
 }
