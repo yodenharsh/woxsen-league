@@ -1,20 +1,14 @@
 <template>
   <div>
     <TheHeader></TheHeader>
-    <div class="form-card">
-      <Card>
-        <Form></Form>
-      </Card>
-    </div>
+    <RouterView> </RouterView>
     <TheFooter></TheFooter>
   </div>
 </template>
 
 <script setup>
-import TheHeader from "./views/TheHeader.vue";
-import Form from "./components/Form.vue";
-import TheFooter from "./views/TheFooter.vue";
-import Card from "./views/Card.vue";
+import TheHeader from "./components/UI/TheHeader.vue";
+import TheFooter from "./components/UI/TheFooter.vue";
 </script>
 
 <style scoped>
@@ -27,13 +21,5 @@ import Card from "./views/Card.vue";
 
 .header-div {
   padding-left: 40px;
-}
-
-.form-card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
 }
 </style>

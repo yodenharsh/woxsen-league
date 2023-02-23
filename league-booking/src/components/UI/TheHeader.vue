@@ -2,9 +2,11 @@
   <div>
     <header class="main-header">
       <div class="header-div">
-        <img
-          src="https://getmyuni.azureedge.net/college-image/small/woxsen-university-hyderabad.jpg"
-        />
+        <RouterLink to="/">
+          <img
+            src="https://getmyuni.azureedge.net/college-image/small/woxsen-university-hyderabad.jpg"
+          />
+        </RouterLink>
         <h1>Woxsen League Bookings [ONLY CRICKET GROUND]</h1>
       </div>
     </header>

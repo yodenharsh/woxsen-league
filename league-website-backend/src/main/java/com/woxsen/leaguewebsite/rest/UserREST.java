@@ -22,6 +22,7 @@ import com.woxsen.leaguewebsite.service.UserOperationsService;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class UserREST {
 	
 	private UserOperationsService userOperationsService;
@@ -43,16 +44,15 @@ public class UserREST {
 		return userOperationsService.getBooking(token);
 	}
 	
-	@CrossOrigin
 	@GetMapping("/userOps/slots")
+	@CrossOrigin()
 	public List<Slot> getAvailableSlots(@RequestParam("facility") String facility, @RequestParam("date") LocalDate date){
 		return userOperationsService.getAvailableSlots(facility, date);
 	}
 	
-	@CrossOrigin
 	@PostMapping(value = "/userOps/booking", consumes = MediaType.APPLICATION_JSON_VALUE)
+	@CrossOrigin()
 	public ResponseEntity<HashMap<String, String>> bookSlot(@RequestBody Booking booking){
-
 		String token = userOperationsService.bookFacility(booking);
 		HashMap<String,String> tokenMap = new HashMap<>();
 		tokenMap.put("token", token);
